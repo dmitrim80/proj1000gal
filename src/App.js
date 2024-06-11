@@ -1,7 +1,6 @@
-import Project1000gal from "./Project1000gal";
-import './proj1000gal.css';
-import "./App.css";
-
+import Project1000gal from "./Proj1000gal";
+// import "./App.css";
+import './main.css';
 function App() {
   return (
     <div className="App">
