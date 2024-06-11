@@ -68,7 +68,7 @@ const Proj1000gal = () => {
   const totalPages = projData.length;
   const pageNumbers = [];
   
-  for (let i = Math.max(0, currentIndex -3); i<= Math.min(totalPages-1, currentIndex + 7); i++) {
+  for (let i = Math.max(0, currentIndex -3); i<= Math.min(totalPages-1, currentIndex + 5); i++) {
     pageNumbers.push(i);
   }
   const renderImages = () => {
@@ -105,7 +105,17 @@ const Proj1000gal = () => {
       );
     }
   };
-
+  const renderContent = () => {
+    if (Array.isArray(currentProject.content)) {
+      return currentProject.content.map((par, index) => (
+        <p key={index}>{par}</p>
+      ));
+    } else {
+      return currentProject.content.split('\n\n').map((par, index) => (
+        <p key={index}>{par}</p>
+      ));
+    }
+  };
   return (
     <div className='main'>
         <div className='left-container'>
@@ -117,12 +127,13 @@ const Proj1000gal = () => {
         <div className='right-container'>
           
           <div key={currentProject.id} className='right-main-content'>
-              <p>{currentProject.date}</p>
-              <p>{currentProject.content}</p>
+              <spa>{currentProject.date}</spa>
+              {renderContent()}
           </div>
           <div className='bottom-right-navigation'>
             <div className='pagination'>
               <div className='page-numbers'>
+              <div onClick={() => handlePageChange(0)}className='empty-button'>First</div>
                 {pageNumbers.map((pageNum) => (
                 <span 
                     key={pageNum}
@@ -137,11 +148,14 @@ const Proj1000gal = () => {
                     {pageNum + 1}
                 </span>
                 ))}
+                <div onClick={() => handlePageChange(projData.length-1)} className='empty-button'>Last</div>
               </div>
               <div className='page-count-box'>
-                <button onClick={handlePrev}>Previous</button>
+              
+                <button onClick={handlePrev} >Previous</button>
                   <span className='page-count'>{currentIndex + 1} / {projData.length}</span>
                 <button onClick={handleNext}>Next</button>
+                
               </div>
 
             </div>
