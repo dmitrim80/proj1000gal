@@ -433,14 +433,13 @@ text-align:left;
         border: #5a6baa 1px solid;
         box-shadow: 0 0 10px #0c35c7;
         border-radius: 7px;
-        height: 88vh;
+        height: 89vh;
     }
     /*left side*/
     .left-container{
         display: flex;
         text-align: center;
         flex-direction: column;
-
         box-sizing: border-box;
     }
     .top-left-navigation{
