@@ -433,6 +433,7 @@ text-align:left;
         border: #5a6baa 1px solid;
         box-shadow: 0 0 10px #0c35c7;
         border-radius: 7px;
+        height: 92vh;
     }
     /*left side*/
     .left-container{
