@@ -427,13 +427,13 @@ text-align:left;
         flex-direction: column;
         align-items: top;
         justify-content: center;
-        margin-top: 1rem;
+        margin-top: .25rem;
         margin-left: .25rem;
         margin-right: .25rem;
         border: #5a6baa 1px solid;
         box-shadow: 0 0 10px #0c35c7;
         border-radius: 7px;
-        height: 90vh;
+        height: 88vh;
     }
     /*left side*/
     .left-container{
