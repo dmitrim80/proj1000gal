@@ -509,7 +509,7 @@ text-align:left;
         cursor: pointer;
         border-radius: 7px;
         padding: 0.25rem;
-        margin-top: -.25rem;
+        margin-top: 0rem;
         font-size: var(--fs-400);
         transition: var(--transition);
         background-color: var(--clr-primary-350);
@@ -539,6 +539,7 @@ text-align:left;
         color: var(--clr-neutral-100);
     }
     .page-count{
+        margin-left: .5rem;
         width: 4rem;
     }
     /*end of right side*/
