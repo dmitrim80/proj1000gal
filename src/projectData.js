@@ -25,7 +25,6 @@ import page9_2 from "./images/page9_2.jpeg";
 import page9_3 from "./images/page9_3.jpeg";
 import page9_4 from "./images/page9_4.jpeg";
 import page9_5 from "./images/page9_5.jpeg";
-import page10_1 from "./images/page10_1.jpeg";
 import page10_2 from "./images/page10_2.jpeg";
 import page10_3 from "./images/page10_3.jpeg";
 import page14_1 from "./images/page14_1.jpeg";
@@ -524,7 +523,7 @@ const projectData = [
   {
     id: "page10",
     content: ["July 25th Moving Day! Second attempt, we have man power this time. Very exciting and nerves ! Here is a link to the video about 30 minutes before crew shows up..."],
-    date: "2018-11-09",images:[page10_1,
+    date: "2018-11-09",images:[
       page10_2,
       page10_3,],
   },
@@ -532,6 +531,7 @@ const projectData = [
     id: "page11",
     content: ["Here are some more videos of fish tank move and delivery. This was back in Team MRC did an awesome job!"],
     date: "2018-12-20",images:[],
+    youtube_ids:["71z1BW5ADd4","Uxq-hhkYpUE","pJMdb2Hsx5E","x6OIi7wI-Gc","_PoUZcDoFeE","gHscDw226Yw","CaJ9QdN4GSE","gVJ0cOd6yLk","10g1pT_9rmQ","flNkEgwiYqc"],
   },
   {
     id: "page12",

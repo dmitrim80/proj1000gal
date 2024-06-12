@@ -115,6 +115,7 @@
         height: 4rem;
         align-items: center;
         justify-content: center;
+        border: 1px solid red;
     }
     .bottom-left-navigation img{
         margin: .25rem;
