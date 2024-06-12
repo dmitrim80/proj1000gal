@@ -1,26 +1,32 @@
----
 name: Build and Deploy React App to GitHub Pages
+
 on:
   push:
     branches: [main]
-  jobs:
-    build-and-deploy:
-      name: Build and Deploy
-      runs-on: ubuntu-latest
 
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v2
+jobs:
+  build-and-deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
 
-        - name: Build
-          run: npm install
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-        - name: Test
-          run: npm run test
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
 
-        - name: Deploy
-          run: |
-            git config --global user.name 'Dmitri Morozov'
-            git config --global user.email 'dmitri.m80@gmail.com'
-            git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-            npm run deploy
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Deploy
+        run: |
+          git config --global user.name 'Dmitri Morozov'
+          git config --global user.email 'dmitri.m80@gmail.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          npm run deploy
