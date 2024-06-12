@@ -535,7 +535,7 @@ const projectData = [
   },
   {
     id: "page12",
-    content: ["Tank broke!"],
+    content: [""],
     date: "2018-12-20",images:[],
   },
   {
