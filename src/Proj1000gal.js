@@ -97,6 +97,7 @@ const Proj1000gal = () => {
                   src={`https://img.youtube.com/vi/${video}/0.jpg`}
                   alt={`Thumbnail for video ${video}`}
                   style={{ cursor: 'pointer', width: '160px', height: '90px', margin: '5px' }}
+                  
                 />
               </div>
             ))}
