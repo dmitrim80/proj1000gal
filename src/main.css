@@ -25,6 +25,25 @@
     background-color:var(--clr-primary-300); 
     color: var(--clr-neutral-900)
   }
+  /*scroll bar for content formatting start*/
+  .right-main-content::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .right-main-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 7px;
+  }
+  
+  .right-main-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 7px;
+  }
+  
+  .right-main-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+   /*scroll bar for content formatting end*/
   body {
     background-color: var(--clr-neutral-900);
     font-size: var(--fs-400);
@@ -68,9 +87,9 @@
     .top-left-navigation{
     height: 2rem;
     text-align: center;
-    
+    font-weight: bolder;
     font-size: var(--fs-500);
-    }
+    }   
     .left-main-img-container{
         display: flex;
         height: 100%;
@@ -209,7 +228,7 @@ width: 100%;
 .top-left-navigation{
 height: 2rem;
 text-align: center;
-
+font-weight: bolder;
 font-size: var(--fs-500);
 }
 .left-main-img-container{
@@ -344,6 +363,7 @@ text-align:left;
     .top-left-navigation{
     height: 2rem;
     font-size: var(--fs-500);
+    font-weight: bolder;
     }
     .left-main-img-container{
         display: flex;
@@ -473,21 +493,26 @@ text-align:left;
         text-align: center;
         flex-direction: column;
         box-sizing: border-box;
+        justify-content: flex-start;
         height: 100%;
     }
     .top-left-navigation{
     height: 2rem;
-    
-    font-size: var(--fs-450);
+    font-weight: bolder;
+    font-size: var(--fs-500);
     }
     .left-main-img-container{
-        height: 30rem;
-        overflow: auto;
+        display: flex;
+        height: 15rem;
+        /* overflow: auto; */
         align-content: center;
+        justify-content: center;
     }
     
     .left-main-img-container img{
         width: 100%;
+        height: 100%;
+        object-fit: contain;
         border-radius: 7px;
     }
     .bottom-left-navigation{
@@ -512,7 +537,7 @@ text-align:left;
         overflow: auto;
         justify-content: space-between;
         width: 100%;
-        height: 35%;
+        height: 50%;
         box-sizing: border-box;
         
     }
